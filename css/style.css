@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url(../img/pattern.png);
+    color: white;
+    animation-iteration-count: infinite;
+    animation: slide 30s linear infinite;
+}
+
+@keyframes slide{
+    0%{
+        background-position: 0% 0%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 0%;
+    }
+}
+
+.auth {
+    text-align: center;
+
+}   
+
+.container {
+    width: 320px;
+    margin: 0 auto;
+}
+
+.auth__inner {
+    margin-top: 50px;
+    height: 560px;
+    background-color: #111111a4;
+    align-content: center;
+    border-radius: 25px;
+}
+
+.inp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.inp input {
+    height: 40px;
+    width: 300px;
+    background-color: #1a1919b8;
+    border: 1px solid rgb(58, 58, 58);
+    padding-left: 10px;
+    color: aliceblue;
+}
+
+input:focus {
+    outline: none;
+    border: rgba(5, 246, 5, 0.348) 1px solid;
+}
+
+.h2 {
+    margin-bottom: 35px;
+    font-size: 48px;
+    text-decoration: underline;
+    text-decoration-color: rgb(24, 225, 24);
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+button {
+    margin-top: 10px;
+    overflow: hidden;
+    
+}
+
+.button, .log-out {
+    height: 50px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.518);
+    color: aliceblue;
+    border: rgb(69, 74, 69) solid 1px;
+    border-radius: 100px;
+    font-size: 18px;
+    position: relative;
+    transition: all 1s linear;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.button::before, .log-out::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 100px;
+    border: 2px solid rgba(72, 223, 64, 0.996);
+    transition: all 1s linear;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    z-index: 1;
+}
+
+.button::after, .log-out::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgb(24, 225, 24) 0%, rgb(40, 255, 40) 100%);
+    transition: all 1s linear;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    z-index: -1;
+}
+
+.button:hover::before,
+.button:hover::after,
+.log-out:hover::before,
+.log-out:hover::after {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.button:hover,
+.log-out:hover {
+    border-color: transparent;
+    box-shadow: 0 0 15px rgba(24, 225, 24, 0.5);
+    cursor: pointer;
+}
+
+.log {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 25px;
+}
+
+hr {
+    border: 1px solid rgb(18, 119, 18);
+    align-self: center;
+    width: 100%;
+}
+
+p {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.log-out {
+    width: 320px;
+}
+
+i{
+    padding-left: 5px;
+}
+
+.vk {
+    background: linear-gradient(90deg, #5181b8, #4a76a8);
+}
+
+.vk::after {
+    background: linear-gradient(90deg, #6da0d6, #5c8bc8);
+}
+
+.vk::before {
+    border-color: #4a76a800;
+}
+
+.vk:hover {
+    box-shadow: 0 0 15px rgba(81, 129, 184, 0.5);
+}
