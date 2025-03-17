@@ -6,10 +6,7 @@
 }
 
 body {
-    background-image: url(../img/pattern.png);
-    color: white;
-    animation-iteration-count: infinite;
-    animation: slide 30s linear infinite;
+
 }
 
 @keyframes slide{
@@ -17,7 +14,7 @@ body {
         background-position: 0% 0%;
     }
     50%{
-        background-position: 100% 50%;
+        background-position: 100% 100%;
     }
     100%{
         background-position: 0% 0%;
@@ -25,8 +22,12 @@ body {
 }
 
 .auth {
+    padding: 50px 0;
+    background-image: url(../img/pattern.png);
+    color: white;
+    animation-iteration-count: infinite;
+    animation: slide 30s linear infinite;
     text-align: center;
-
 }   
 
 .container {
@@ -35,7 +36,6 @@ body {
 }
 
 .auth__inner {
-    margin-top: 50px;
     height: 560px;
     background-color: #111111a4;
     align-content: center;
